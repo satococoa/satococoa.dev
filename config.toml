@@ -3,6 +3,32 @@ languageCode = 'ja-JP'
 title = 'satococoa.dev'
 theme = 'PaperMod'
 
+[params]
+ShowShareButtons = true
+
+[params.homeInfoParams]
+Title = 'Satoshi Ebisawa (@satococoa)'
+Content = '''
+Web 系のプログラマです。
+
+Ruby や Go が好き。
+2021/06〜2021/12まで育休中。
+'''
+
+[[params.socialIcons]]
+name = 'twitter'
+url = 'https://twitter.com/satococoa'
+[[params.socialIcons]]
+name = 'github'
+url = 'https://github.com/satococoa'
+[[params.socialIcons]]
+name = 'facebook'
+url = 'https://facebook.com/satoshi.ebisawa'
+[[params.socialIcons]]
+name = 'rss'
+url = 'https://satococoa.dev/index.xml'
+
+
 [markup]
 [markup.goldmark]
 [markup.goldmark.renderer]
