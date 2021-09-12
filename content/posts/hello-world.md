@@ -23,3 +23,10 @@ def fuga
   puts "fuga"
 end
 ```
+
+## Cloudflare Pages
+
+- clone error
+  - submodule にしないと、Cloudflare Pages では動作しない
+- HUGO_VERSION
+  - デフォルトで実行される hugo のバージョンが古いので指定する必要あり。幸い環境変数で指定できるようになっている。
