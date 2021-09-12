@@ -6,6 +6,7 @@ googleAnalytics = 'G-063LZ5YTLV'
 
 [params]
 ShowShareButtons = true
+ShareButtons = ['twitter', 'facebook']
 
 [params.homeInfoParams]
 Title = 'Satoshi Ebisawa (@satococoa)'
