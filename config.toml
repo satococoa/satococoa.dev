@@ -2,6 +2,7 @@ baseURL = 'https://satococoa.dev/'
 languageCode = 'ja-JP'
 title = 'satococoa.dev'
 theme = 'PaperMod'
+googleAnalytics = 'G-063LZ5YTLV'
 
 [params]
 ShowShareButtons = true
