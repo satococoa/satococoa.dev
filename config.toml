@@ -4,9 +4,24 @@ title = 'satococoa.dev'
 theme = 'PaperMod'
 googleAnalytics = 'G-063LZ5YTLV'
 
+[[menu.main]]
+identifier = 'archives'
+name = 'archives'
+url = '/archives/'
+weight = 10
+[[menu.main]]
+identifier = 'search'
+name = 'search'
+url = '/search/'
+weight = 20
+
+[outputs]
+home = ['HTML', 'RSS', 'JSON']
+
 [params]
 ShowShareButtons = true
 ShareButtons = ['twitter', 'facebook']
+ShowPostNavLinks = true
 
 [params.homeInfoParams]
 Title = 'Satoshi Ebisawa (@satococoa)'
@@ -29,7 +44,6 @@ url = 'https://facebook.com/satoshi.ebisawa'
 [[params.socialIcons]]
 name = 'rss'
 url = 'https://satococoa.dev/index.xml'
-
 
 [markup]
 [markup.goldmark]
