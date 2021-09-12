@@ -1,0 +1,40 @@
+body {
+  font-size: 1rem;
+}
+* {
+  line-height: 1.8;
+}
+
+.first-entry .entry-header h1 {
+  font-size: 1.3rem;
+}
+.entry-header h2 {
+  font-size: 1.2rem;
+}
+
+.post-title {
+  font-size: 1.4rem;
+}
+
+.post-content h1 {
+  font-size: 1.4rem;
+}
+.post-content h2 {
+  font-size: 1.3rem;
+}
+
+.post-content h3 {
+  font-size: 1.2rem;
+}
+
+.post-content h4 {
+  font-size: 1.1rem;
+}
+
+.post-content h5 {
+  font-size: 1rem;
+}
+
+.post-content h6 {
+  font-size: 1rem;
+}
