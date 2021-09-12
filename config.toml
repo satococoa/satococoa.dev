@@ -2,3 +2,8 @@ baseURL = 'https://satococoa.dev/'
 languageCode = 'ja-JP'
 title = 'Satoshi Ebisawa - @satococoa'
 theme = 'PaperMod'
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
