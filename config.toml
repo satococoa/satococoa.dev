@@ -1,6 +1,6 @@
 baseURL = 'https://satococoa.dev/'
 languageCode = 'ja-JP'
-title = 'Satoshi Ebisawa - @satococoa'
+title = 'satococoa.dev'
 theme = 'PaperMod'
 
 [markup]
