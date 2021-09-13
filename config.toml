@@ -22,6 +22,10 @@ home = ['HTML', 'RSS', 'JSON']
 ShowShareButtons = true
 ShareButtons = ['twitter', 'facebook']
 ShowPostNavLinks = true
+ShowBreadCrumbs = true
+DateFormat = "2006/01/02 15:04:05"
+ShowCodeCopyButtons = true
+showtoc = true
 
 [params.homeInfoParams]
 Title = 'Satoshi Ebisawa (@satococoa)'
