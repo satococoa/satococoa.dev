@@ -1,0 +1,77 @@
+---
+import "@/styles/global.css";
+import { navigation, profile, siteMeta } from "@/lib/constants";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const { title, description = siteMeta.description } = Astro.props;
+const pageTitle = title ? `${title} | ${siteMeta.title}` : siteMeta.title;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {
+      siteMeta.googleAnalyticsId && (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${siteMeta.googleAnalyticsId}`}
+          ></script>
+          <script
+            is:inline
+            define:vars={{ googleAnalyticsId: siteMeta.googleAnalyticsId }}
+          >
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', googleAnalyticsId);
+            `}
+          </script>
+        </>
+      )
+    }
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="site-brand" href="/">{profile.handle}</a>
+        <nav aria-label="Primary">
+          <ul class="site-nav">
+            {
+              navigation.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={currentPath === item.href ? "page" : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </header>
+
+      <main class="page-main">
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <p>{profile.name}</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/Section.astro";
+import { workHighlights, workHistory, workSummary, workTimeline } from "@/lib/constants";
+---
+
+<BaseLayout
+  title="Work"
+  description="Satoshi Ebisawa の業務経歴、得意領域、技術スタンスをまとめたページです。"
+>
+  <Section
+    title="仕事について"
+    eyebrow="Work"
+    lead="Web プロダクトの開発と改善を軸に、実装、設計、運用、マネジメントをまたいで必要なことを広く扱ってきました。"
+  >
+    <ul class="plain-list">
+      {workHighlights.map((item) => <li>{item}</li>)}
+    </ul>
+  </Section>
+
+  <Section
+    title="Summary"
+    eyebrow="Snapshot"
+    lead="仕事の軸を短くまとめています。"
+  >
+    <ul class="plain-list">
+      {workSummary.map((item) => <li>{item}</li>)}
+    </ul>
+  </Section>
+
+  <Section
+    title="関わってきた領域"
+    eyebrow="Experience"
+    lead="職種名に閉じず、プロダクトとチームが前に進むために必要な地点まで責任を持つ進め方を好みます。"
+  >
+    <div class="stack-list">
+      {
+        workTimeline.map((item) => (
+          <article class="stack-card">
+            <p class="meta">{item.period}</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section
+    title="主なキャリアの流れ"
+    eyebrow="History"
+    lead="取り組んできたことを今につながる流れでまとめています。"
+  >
+    <div class="stack-list">
+      {
+        workHistory.map((item) => (
+          <article class="stack-card">
+            <p class="meta">{item.period}</p>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+            <ul class="plain-list compact-list">
+              {item.details.map((detail) => <li>{detail}</li>)}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section
+    title="技術スタンス"
+    eyebrow="Approach"
+    lead="技術選定そのものよりも、何をどう前に進めるとチームとプロダクトが強くなるかに関心があります。"
+  >
+    <p>
+      そのため、言語やフレームワークを固定のアイデンティティにはせず、状況に応じて現実的に選びます。
+      一方で、人が気持ちよく働けるチームづくりや、コミュニティ活動、育休取得を含むキャリアの積み重ねも自分の仕事の一部だと考えています。
+    </p>
+  </Section>
+</BaseLayout>

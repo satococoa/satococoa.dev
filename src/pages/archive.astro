@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/Section.astro";
+import { externalLinks } from "@/lib/constants";
+
+const articlePlatforms = externalLinks.filter((link) =>
+  ["Zenn", "dev.to", "note", "Hatena Blog"].includes(link.label),
+);
+---
+
+<BaseLayout
+  title="Archive"
+  description="過去記事と外部の執筆先をまとめたページです。"
+>
+  <Section
+    title="記事の置き場所"
+    eyebrow="Archive"
+    lead="記事は媒体ごとに分けて公開しています。"
+  >
+    <ul class="link-grid">
+      {
+        articlePlatforms.map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noreferrer">
+              <span>{link.label}</span>
+              {link.note && <small>{link.note}</small>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+
+  <Section
+    title="過去記事について"
+    eyebrow="Legacy"
+    lead="過去の公開アーカイブは Hatena Blog に残しています。"
+  >
+    <p>
+      旧記事の公開先としては <a href="https://satococoa.hatenablog.com" target="_blank" rel="noreferrer">Hatena Blog</a>
+      を参照してください。必要に応じて、一部の記事は今後 note に再編集して移していく予定です。
+    </p>
+  </Section>
+</BaseLayout>

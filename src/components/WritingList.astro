@@ -1,0 +1,79 @@
+---
+const endpoint = "/api/writings.json";
+---
+
+<div class="writing-list" data-writing-list data-endpoint={endpoint}>
+  <p class="writing-list-status">最新記事を読み込んでいます。</p>
+</div>
+
+<noscript>
+  <p class="writing-list-status">
+    JavaScript が無効な場合は、Zenn・dev.to・note の各プロフィールから最新記事をご覧ください。
+  </p>
+</noscript>
+
+<script is:inline>
+  const formatDate = (value) => {
+    try {
+      return new Intl.DateTimeFormat("ja-JP", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      }).format(new Date(value));
+    } catch {
+      return value;
+    }
+  };
+
+  const sourceLabel = {
+    zenn: "Zenn",
+    devto: "dev.to",
+    note: "note",
+  };
+
+  const containers = document.querySelectorAll("[data-writing-list]");
+
+  for (const container of containers) {
+    const endpoint = container.dataset.endpoint;
+    const status = container.querySelector(".writing-list-status");
+
+    fetch(endpoint)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Request failed: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const items = Array.isArray(data.items) ? data.items : [];
+
+        if (items.length === 0) {
+          container.innerHTML = "<p class='writing-list-status'>まだ表示できる記事がありません。</p>";
+          return;
+        }
+
+        const list = document.createElement("ol");
+        list.className = "writing-items";
+
+        for (const item of items) {
+          const row = document.createElement("li");
+          row.className = "writing-item";
+          row.innerHTML = `
+            <a class="writing-link" href="${item.url}" target="_blank" rel="noreferrer">
+              <span class="writing-source">${sourceLabel[item.source] ?? item.source}</span>
+              <span class="writing-title">${item.title}</span>
+            </a>
+            <time class="writing-date" datetime="${item.publishedAt}">${formatDate(item.publishedAt)}</time>
+          `;
+          list.appendChild(row);
+        }
+
+        container.replaceChildren(list);
+      })
+      .catch(() => {
+        if (status) {
+          status.textContent = "記事の読み込みに失敗しました。各媒体のプロフィールからご覧ください。";
+        }
+      });
+  }
+</script>

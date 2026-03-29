@@ -1,0 +1,29 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/Section.astro";
+import { workingPrinciples } from "@/lib/constants";
+---
+
+<BaseLayout
+  title="How I work"
+  description="Satoshi Ebisawa がチームで仕事を進めるときに大事にしていることをまとめたページです。"
+>
+  <Section
+    title="How I work"
+    eyebrow="Approach"
+    lead="仕事を進めるうえで、日々重視していることです。"
+  >
+    <div class="stack-list">
+      {
+        workingPrinciples.map((section) => (
+          <article class="stack-card">
+            <h3>{section.title}</h3>
+            <ul class="plain-list">
+              {section.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+</BaseLayout>

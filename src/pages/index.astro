@@ -1,0 +1,64 @@
+---
+import Section from "@/components/Section.astro";
+import WritingList from "@/components/WritingList.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { capabilities, externalLinks, featuredTopics, profile } from "@/lib/constants";
+---
+
+<BaseLayout>
+  <section class="hero">
+    <p class="hero-eyebrow">Personal portal</p>
+    <h1>{profile.name}</h1>
+    <p class="hero-role">{profile.role}</p>
+    <p class="hero-handle">{profile.handle} / {profile.company} / {profile.location}</p>
+    <p class="hero-copy">{profile.intro}</p>
+    <p class="hero-copy muted">{profile.summary}</p>
+  </section>
+
+  <Section
+    title="できること"
+    eyebrow="Capabilities"
+    lead="主に扱ってきた領域です。"
+  >
+    <ul class="plain-list">
+      {capabilities.map((item) => <li>{item}</li>)}
+    </ul>
+  </Section>
+
+  <Section
+    title="いま注力していること"
+    eyebrow="Focus"
+    lead="最近よく取り組んでいるテーマです。"
+  >
+    <ul class="plain-list">
+      {featuredTopics.map((topic) => <li>{topic}</li>)}
+    </ul>
+  </Section>
+
+  <Section
+    title="最新記事"
+    eyebrow="Writing"
+    lead="Zenn・dev.to・note の最近の記事です。"
+  >
+    <WritingList />
+  </Section>
+
+  <Section
+    title="外部リンク"
+    eyebrow="Elsewhere"
+    lead="発信先や活動先へのリンクです。"
+  >
+    <ul class="link-grid">
+      {
+        externalLinks.map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noreferrer">
+              <span>{link.label}</span>
+              {link.note && <small>{link.note}</small>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+</BaseLayout>

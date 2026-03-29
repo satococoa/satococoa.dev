@@ -1,0 +1,21 @@
+{
+  "name": "satococoa.dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.1.4",
+    "astro": "^6.1.1",
+    "fast-xml-parser": "^5.5.9",
+    "wrangler": "^4.78.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "typescript": "^5.9.3"
+  }
+}
