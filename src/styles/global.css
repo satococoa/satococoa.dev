@@ -1,11 +1,11 @@
 :root {
   --bg: #fbf8f4;
   --bg-wash: #f5efe6;
-  --blush: rgba(249, 221, 228, 0.44);
-  --mint: rgba(219, 236, 225, 0.42);
-  --sky: rgba(216, 230, 245, 0.4);
-  --surface: rgba(255, 253, 250, 0.44);
-  --surface-strong: rgba(255, 252, 249, 0.62);
+  --blush: rgba(250, 220, 229, 0.56);
+  --mint: rgba(216, 238, 226, 0.52);
+  --sky: rgba(212, 228, 246, 0.5);
+  --surface: rgba(255, 253, 250, 0.34);
+  --surface-strong: rgba(255, 252, 249, 0.48);
   --line: rgba(104, 89, 77, 0.12);
   --line-strong: rgba(104, 89, 77, 0.18);
   --text: #2f2924;
@@ -27,9 +27,10 @@
 
 html {
   background:
-    radial-gradient(circle at 14% 8%, var(--blush), transparent 28%),
-    radial-gradient(circle at 84% 14%, var(--mint), transparent 30%),
-    radial-gradient(circle at 78% 78%, var(--sky), transparent 28%),
+    radial-gradient(circle at 14% 8%, var(--blush), transparent 30%),
+    radial-gradient(circle at 84% 14%, var(--mint), transparent 34%),
+    radial-gradient(circle at 78% 78%, var(--sky), transparent 30%),
+    radial-gradient(circle at 58% 42%, rgba(255, 255, 255, 0.52), transparent 44%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-wash) 100%);
   color: var(--text);
   font-family: var(--font-body);
@@ -60,21 +61,21 @@ body::after {
 }
 
 body::before {
-  top: 8vh;
-  right: 6vw;
-  width: 18rem;
-  height: 18rem;
+  top: 4vh;
+  right: 4vw;
+  width: 22rem;
+  height: 22rem;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 246, 239, 0.34), rgba(232, 246, 239, 0));
+  background: radial-gradient(circle, rgba(226, 245, 235, 0.5), rgba(232, 246, 239, 0));
 }
 
 body::after {
-  bottom: 10vh;
-  left: 4vw;
-  width: 15rem;
-  height: 15rem;
+  bottom: 8vh;
+  left: 2vw;
+  width: 19rem;
+  height: 19rem;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(247, 226, 232, 0.3), rgba(247, 226, 232, 0));
+  background: radial-gradient(circle, rgba(248, 225, 233, 0.42), rgba(247, 226, 232, 0));
 }
 
 a {
@@ -170,11 +171,13 @@ small,
   margin: 0 -0.4rem 4.75rem;
   border: 1px solid rgba(255, 255, 255, 0.46);
   border-radius: 999px;
-  background: rgba(251, 248, 244, 0.56);
-  backdrop-filter: blur(20px) saturate(150%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.2)),
+    rgba(251, 248, 244, 0.38);
+  backdrop-filter: blur(24px) saturate(165%);
   box-shadow:
-    0 8px 24px rgba(120, 103, 91, 0.045),
-    inset 0 1px 0 rgba(255, 255, 255, 0.58);
+    0 8px 24px rgba(120, 103, 91, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .site-brand {
@@ -256,13 +259,14 @@ small,
   border: 1px solid rgba(255, 255, 255, 0.52);
   border-radius: 2rem;
   background:
-    radial-gradient(circle at top right, rgba(255, 236, 242, 0.58), transparent 36%),
-    radial-gradient(circle at left bottom, rgba(220, 239, 229, 0.52), transparent 32%),
-    linear-gradient(180deg, rgba(255, 253, 250, 0.54) 0%, rgba(255, 250, 246, 0.34) 100%);
-  backdrop-filter: blur(22px) saturate(145%);
+    radial-gradient(circle at top right, rgba(255, 236, 242, 0.62), transparent 38%),
+    radial-gradient(circle at left bottom, rgba(220, 239, 229, 0.56), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 250, 246, 0.2) 100%);
+  backdrop-filter: blur(28px) saturate(165%);
   box-shadow:
-    0 12px 34px rgba(137, 107, 89, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    0 12px 34px rgba(137, 107, 89, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .hero::after {
@@ -357,13 +361,15 @@ small,
 .writing-list,
 .archive-list li {
   position: relative;
-  background: var(--surface);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.14)),
+    var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.56);
   border-radius: 1.5rem;
-  backdrop-filter: blur(20px) saturate(135%);
+  backdrop-filter: blur(24px) saturate(150%);
   box-shadow:
-    0 8px 22px rgba(137, 107, 89, 0.035),
-    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+    0 8px 22px rgba(137, 107, 89, 0.028),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
 }
 
 .stack-card::before,
