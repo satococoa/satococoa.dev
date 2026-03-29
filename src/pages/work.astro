@@ -8,10 +8,18 @@ import { workHighlights, workHistory, workSummary, workTimeline } from "@/lib/co
   title="Work"
   description="Satoshi Ebisawa の業務経歴、得意領域、技術スタンスをまとめたページです。"
 >
+  <section class="page-header">
+    <p class="page-header-eyebrow">Work</p>
+    <h1 class="page-header-title">仕事</h1>
+    <p class="page-header-lead">
+      Web プロダクトの開発と改善を軸に、実装、設計、運用、マネジメントをまたいで必要なことを広く扱ってきました。
+    </p>
+  </section>
+
   <Section
     title="仕事について"
     eyebrow="Work"
-    lead="Web プロダクトの開発と改善を軸に、実装、設計、運用、マネジメントをまたいで必要なことを広く扱ってきました。"
+    lead="独学からキャリアを始め、toC サービス、コマース、AI プロダクトまで関わる領域を広げてきました。"
   >
     <ul class="plain-list">
       {workHighlights.map((item) => <li>{item}</li>)}
@@ -19,7 +27,7 @@ import { workHighlights, workHistory, workSummary, workTimeline } from "@/lib/co
   </Section>
 
   <Section
-    title="Summary"
+    title="できること"
     eyebrow="Snapshot"
     lead="仕事の軸を短くまとめています。"
   >
