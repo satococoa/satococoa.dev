@@ -30,7 +30,8 @@ html {
     radial-gradient(circle at 14% 8%, var(--blush), transparent 30%),
     radial-gradient(circle at 84% 14%, var(--mint), transparent 34%),
     radial-gradient(circle at 78% 78%, var(--sky), transparent 30%),
-    radial-gradient(circle at 58% 42%, rgba(255, 255, 255, 0.52), transparent 44%),
+    radial-gradient(circle at 58% 42%, rgba(255, 255, 255, 0.58), transparent 44%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 42%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-wash) 100%);
   color: var(--text);
   font-family: var(--font-body);
@@ -153,6 +154,17 @@ small,
   width: var(--content-width);
   margin: 0 auto;
   padding: 2.2rem 0 6rem;
+}
+
+.page-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.22), transparent 24%),
+    radial-gradient(circle at 82% 28%, rgba(255, 255, 255, 0.18), transparent 22%);
 }
 
 .site-header,
@@ -386,6 +398,20 @@ small,
   opacity: 0.8;
 }
 
+.stack-card::after,
+.link-grid li::after,
+.writing-list::after,
+.archive-list li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.14);
+}
+
 .stack-card {
   padding: 1.45rem 1.5rem;
 }
@@ -507,7 +533,40 @@ small,
   padding-top: 1.6rem;
   border-top: 1px solid rgba(104, 89, 77, 0.08);
   font-size: 0.9rem;
-  justify-content: flex-start;
+  justify-content: center;
+  color: rgba(110, 101, 95, 0.78);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero,
+  .page-header,
+  .section-block {
+    animation: rise-fade 680ms ease both;
+  }
+
+  .page-header {
+    animation-delay: 60ms;
+  }
+
+  .section-block:nth-of-type(2) {
+    animation-delay: 110ms;
+  }
+
+  .section-block:nth-of-type(3) {
+    animation-delay: 150ms;
+  }
+}
+
+@keyframes rise-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 720px) {
