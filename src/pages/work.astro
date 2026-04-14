@@ -1,7 +1,13 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Section from "@/components/Section.astro";
-import { workHighlights, workHistory, workSummary, workTimeline } from "@/lib/constants";
+import { workHighlights, workHistory, workTimeline } from "@/data/work";
+
+const workSummary = [
+  "フルスタックに広く手を動かせること",
+  "プロダクトとチームを前に進めるための技術判断ができること",
+  "AI 時代の開発フローや働き方を自分で試し、言語化できること",
+];
 ---
 
 <BaseLayout

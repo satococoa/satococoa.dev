@@ -2,8 +2,9 @@
 import { Icon } from "astro-icon/components";
 import Section from "@/components/Section.astro";
 import WritingList from "@/components/WritingList.astro";
+import { externalLinks } from "@/data/links";
+import { profile } from "@/data/profile";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { capabilities, externalLinks, featuredTopics, profile, skillTags } from "@/lib/constants";
 ---
 
 <BaseLayout>
@@ -21,7 +22,7 @@ import { capabilities, externalLinks, featuredTopics, profile, skillTags } from 
       <p class="hero-copy">{profile.intro}</p>
       <p class="hero-copy muted">{profile.summary}</p>
       <div class="hero-tags">
-        {skillTags.map((tag) => <span class="hero-tag">{tag}</span>)}
+        {profile.skillTags.map((tag) => <span class="hero-tag">{tag}</span>)}
       </div>
     </div>
   </section>
@@ -32,7 +33,7 @@ import { capabilities, externalLinks, featuredTopics, profile, skillTags } from 
     lead="主に扱ってきた領域です。"
   >
     <ul class="icon-list">
-      {capabilities.map((item) => (
+      {profile.capabilities.map((item) => (
         <li>
           <span class="icon-list-icon" aria-hidden="true">
             <Icon name={item.icon} />
@@ -49,7 +50,7 @@ import { capabilities, externalLinks, featuredTopics, profile, skillTags } from 
     lead="最近よく取り組んでいるテーマです。"
   >
     <ul class="icon-list">
-      {featuredTopics.map((topic) => (
+      {profile.featuredTopics.map((topic) => (
         <li>
           <span class="icon-list-icon" aria-hidden="true">
             <Icon name={topic.icon} />
