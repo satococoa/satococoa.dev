@@ -100,10 +100,6 @@ ol {
   margin: 0;
 }
 
-p {
-  max-width: 40rem;
-}
-
 h1,
 h2,
 h3 {
@@ -265,8 +261,9 @@ small,
 }
 
 .page-header-lead {
-  max-width: 34rem;
+  max-width: none;
   color: var(--muted);
+  text-wrap: pretty;
 }
 
 .hero {
@@ -394,15 +391,21 @@ small,
 }
 
 .section-lead {
-  max-width: 34rem;
+  max-width: none;
   color: var(--muted);
   font-size: 0.98rem;
+  text-wrap: pretty;
 }
 
 .section-body {
   display: grid;
   gap: 1.3rem;
   margin-top: 0.25rem;
+}
+
+.section-body > p {
+  max-width: none;
+  text-wrap: pretty;
 }
 
 .plain-list,
@@ -510,6 +513,11 @@ small,
   margin-top: 0.15rem;
   margin-bottom: 0.55rem;
   font-size: 1.16rem;
+}
+
+.stack-card p {
+  max-width: none;
+  text-wrap: pretty;
 }
 
 .group-block {

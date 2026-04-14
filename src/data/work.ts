@@ -93,3 +93,18 @@ export const workingPrinciples = [
     ],
   },
 ];
+
+export const communityActivities = [
+  {
+    title: "P4D",
+    href: "https://p4d.connpass.com/",
+    description:
+      "プロダクトや開発の実践を持ち寄るコミュニティとして主催。技術そのものだけでなく、ものづくりの進め方や現場の工夫を共有する場づくりに取り組みました。",
+  },
+  {
+    title: "RubyMotionJP",
+    href: "https://rubymotionjp.connpass.com/",
+    description:
+      "RubyMotion をテーマにしたコミュニティの主催として、情報交換や勉強会の運営に関わりました。iOS 開発に向き合っていた時期の活動の一つです。",
+  },
+];

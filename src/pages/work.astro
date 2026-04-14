@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Section from "@/components/Section.astro";
-import { workHighlights, workHistory, workTimeline } from "@/data/work";
+import { communityActivities, workHighlights, workHistory, workTimeline } from "@/data/work";
 
 const workSummary = [
   "フルスタックに広く手を動かせること",
@@ -90,5 +90,30 @@ const workSummary = [
       そのため、言語やフレームワークを固定のアイデンティティにはせず、状況に応じて現実的に選びます。
       一方で、人が気持ちよく働けるチームづくりや、コミュニティ活動、育休取得を含むキャリアの積み重ねも自分の仕事の一部だと考えています。
     </p>
+  </Section>
+
+  <Section
+    title="コミュニティ活動"
+    eyebrow="Community"
+    lead="プロダクト開発と並行して、コミュニティの運営や場づくりにも継続して関わってきました。"
+  >
+    <div class="stack-list">
+      {
+        communityActivities.map((activity) => (
+          <article class="stack-card">
+            <h3>
+              {activity.href ? (
+                <a href={activity.href} target="_blank" rel="noreferrer">
+                  {activity.title}
+                </a>
+              ) : (
+                activity.title
+              )}
+            </h3>
+            <p>{activity.description}</p>
+          </article>
+        ))
+      }
+    </div>
   </Section>
 </BaseLayout>
