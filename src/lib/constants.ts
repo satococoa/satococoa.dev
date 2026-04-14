@@ -53,6 +53,7 @@ export const capabilities = [
 export const externalLinks: ExternalLink[] = [
   { label: "GitHub", href: "https://github.com/satococoa" },
   { label: "X", href: "https://x.com/satococoa" },
+  { label: "LAPRAS", href: "https://lapras.com/public/satococoa", note: "職務プロフィール" },
   { label: "Zenn", href: "https://zenn.dev/satococoa", note: "技術記事" },
   { label: "dev.to", href: "https://dev.to/satococoa", note: "英語の技術記事" },
   { label: "note", href: "https://note.com/satococoa", note: "技術以外の記事" },
