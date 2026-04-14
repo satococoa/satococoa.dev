@@ -5,13 +5,10 @@
   --mint: rgba(216, 238, 226, 0.52);
   --sky: rgba(212, 228, 246, 0.5);
   --surface: rgba(255, 253, 250, 0.34);
-  --surface-strong: rgba(255, 252, 249, 0.48);
   --line: rgba(104, 89, 77, 0.12);
-  --line-strong: rgba(104, 89, 77, 0.18);
   --text: #2f2924;
   --muted: #6e655f;
   --accent: #896b59;
-  --accent-soft: rgba(137, 107, 89, 0.08);
   --accent-mint: #6e8f7d;
   --font-body: "Hiragino Sans", "Yu Gothic Medium", "Yu Gothic", "Noto Sans JP", sans-serif;
   --font-display: "Hiragino Mincho ProN", "Yu Mincho", "BIZ UDPMincho", serif;
@@ -409,7 +406,6 @@ small,
 }
 
 .plain-list,
-.archive-list,
 .writing-items {
   display: grid;
   gap: 0.95rem;
@@ -467,8 +463,7 @@ small,
 
 .stack-card,
 .link-grid li,
-.writing-list,
-.archive-list li {
+.writing-list {
   position: relative;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.14)),
@@ -483,8 +478,7 @@ small,
 
 .stack-card::before,
 .link-grid li::before,
-.writing-list::before,
-.archive-list li::before {
+.writing-list::before {
   content: "";
   position: absolute;
   inset: 0 auto auto 1.15rem;
@@ -497,8 +491,7 @@ small,
 
 .stack-card::after,
 .link-grid li::after,
-.writing-list::after,
-.archive-list li::after {
+.writing-list::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -623,18 +616,6 @@ small,
   white-space: nowrap;
 }
 
-.archive-list {
-  list-style: none;
-  padding: 0;
-}
-
-.archive-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.08rem 1.18rem;
-}
-
 .site-footer {
   display: grid;
   gap: 1.8rem;
@@ -653,7 +634,6 @@ small,
 }
 
 .footer-name {
-  margin: 0;
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 600;
@@ -661,7 +641,6 @@ small,
 }
 
 .footer-bio {
-  margin: 0;
   font-size: 0.85rem;
   color: var(--muted);
 }
@@ -752,7 +731,6 @@ small,
   }
 }
 
-/* Scroll-triggered reveal animation (applied via JS) */
 @media (prefers-reduced-motion: no-preference) {
   .will-reveal {
     opacity: 0;
@@ -776,7 +754,6 @@ small,
   .link-grid li.will-reveal:nth-child(7) { transition-delay: 300ms; }
 }
 
-/* Card color differentiation by context */
 .writing-list::before {
   background: linear-gradient(90deg, rgba(197, 216, 240, 0.95), rgba(170, 200, 235, 0.9));
 }
@@ -818,12 +795,6 @@ small,
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
-  }
-
-  .archive-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.35rem;
   }
 
   .site-footer {
