@@ -1,18 +1,29 @@
 ---
+import { Icon } from "astro-icon/components";
 import Section from "@/components/Section.astro";
 import WritingList from "@/components/WritingList.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { capabilities, externalLinks, featuredTopics, profile } from "@/lib/constants";
+import { capabilities, externalLinks, featuredTopics, profile, skillTags } from "@/lib/constants";
 ---
 
 <BaseLayout>
   <section class="hero">
-    <p class="hero-eyebrow">Personal portal</p>
-    <h1>{profile.name}</h1>
-    <p class="hero-role">{profile.role}</p>
-    <p class="hero-handle">{profile.handle} / {profile.company} / {profile.location}</p>
-    <p class="hero-copy">{profile.intro}</p>
-    <p class="hero-copy muted">{profile.summary}</p>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Personal portal</p>
+      <div class="hero-identity">
+        <img class="hero-avatar" src="/avatar.png" alt={profile.name} width="72" height="72" />
+        <div>
+          <h1>{profile.name}</h1>
+          <p class="hero-role">{profile.role}</p>
+        </div>
+      </div>
+      <p class="hero-handle">{profile.handle} / {profile.company} / {profile.location}</p>
+      <p class="hero-copy">{profile.intro}</p>
+      <p class="hero-copy muted">{profile.summary}</p>
+      <div class="hero-tags">
+        {skillTags.map((tag) => <span class="hero-tag">{tag}</span>)}
+      </div>
+    </div>
   </section>
 
   <Section
@@ -20,8 +31,15 @@ import { capabilities, externalLinks, featuredTopics, profile } from "@/lib/cons
     eyebrow="Capabilities"
     lead="主に扱ってきた領域です。"
   >
-    <ul class="plain-list">
-      {capabilities.map((item) => <li>{item}</li>)}
+    <ul class="icon-list">
+      {capabilities.map((item) => (
+        <li>
+          <span class="icon-list-icon" aria-hidden="true">
+            <Icon name={item.icon} />
+          </span>
+          <span>{item.label}</span>
+        </li>
+      ))}
     </ul>
   </Section>
 
@@ -30,8 +48,15 @@ import { capabilities, externalLinks, featuredTopics, profile } from "@/lib/cons
     eyebrow="Focus"
     lead="最近よく取り組んでいるテーマです。"
   >
-    <ul class="plain-list">
-      {featuredTopics.map((topic) => <li>{topic}</li>)}
+    <ul class="icon-list">
+      {featuredTopics.map((topic) => (
+        <li>
+          <span class="icon-list-icon" aria-hidden="true">
+            <Icon name={topic.icon} />
+          </span>
+          <span>{topic.label}</span>
+        </li>
+      ))}
     </ul>
   </Section>
 
@@ -53,6 +78,11 @@ import { capabilities, externalLinks, featuredTopics, profile } from "@/lib/cons
         externalLinks.map((link) => (
           <li>
             <a href={link.href} target="_blank" rel="noreferrer">
+              {link.icon && (
+                <span class="link-icon" aria-hidden="true">
+                  <Icon name={link.icon} />
+                </span>
+              )}
               <span>{link.label}</span>
               {link.note && <small>{link.note}</small>}
             </a>

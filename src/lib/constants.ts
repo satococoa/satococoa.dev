@@ -2,6 +2,7 @@ export type ExternalLink = {
   label: string;
   href: string;
   note?: string;
+  icon?: string;
 };
 
 export type ProjectItem = {
@@ -42,22 +43,21 @@ export const profile = {
     "最近は AI を前提にしたプロダクト開発や開発フローにも強い関心があります。",
 };
 
-export const capabilities = [
-  "Web frontend (React, Next.js)",
-  "Backend (Ruby on Rails, Go, TypeScript)",
-  "iOS app development",
-  "Product development and technical leadership",
-  "LLM application / RAG / AI workflow design",
+export const capabilities: { label: string; icon: string }[] = [
+  { label: "Web frontend (React, Next.js)", icon: "lucide:monitor" },
+  { label: "Backend (Ruby on Rails, Go, TypeScript)", icon: "lucide:server" },
+  { label: "iOS app development", icon: "lucide:smartphone" },
+  { label: "Product development and technical leadership", icon: "lucide:rocket" },
+  { label: "LLM application / RAG / AI workflow design", icon: "lucide:bot" },
 ];
 
 export const externalLinks: ExternalLink[] = [
-  { label: "GitHub", href: "https://github.com/satococoa" },
-  { label: "X", href: "https://x.com/satococoa" },
-  { label: "LAPRAS", href: "https://lapras.com/public/satococoa", note: "職務プロフィール" },
-  { label: "Zenn", href: "https://zenn.dev/satococoa", note: "技術記事" },
-  { label: "dev.to", href: "https://dev.to/satococoa", note: "英語の技術記事" },
-  { label: "note", href: "https://note.com/satococoa", note: "技術以外の記事" },
-  { label: "Hatena Blog", href: "https://satococoa.hatenablog.com", note: "過去記事" },
+  { label: "GitHub", href: "https://github.com/satococoa", icon: "lucide:github" },
+  { label: "LAPRAS", href: "https://lapras.com/public/satococoa", note: "職務プロフィール", icon: "lucide:clipboard" },
+  { label: "Zenn", href: "https://zenn.dev/satococoa", note: "技術記事", icon: "lucide:pen-line" },
+  { label: "dev.to", href: "https://dev.to/satococoa", note: "英語の技術記事", icon: "lucide:code" },
+  { label: "note", href: "https://note.com/satococoa", note: "技術以外の記事", icon: "lucide:file-text" },
+  { label: "Hatena Blog", href: "https://satococoa.hatenablog.com", note: "過去記事", icon: "lucide:book-open" },
 ];
 
 export const navigation = [
@@ -170,10 +170,10 @@ export const workingPrinciples: WorkingPrinciple[] = [
   },
 ];
 
-export const featuredTopics = [
-  "AI を前提にした最近の仕事の進め方",
-  "開発に効く Codex やエージェントの使い方",
-  "RAG、LLM 基盤、開発者向けプロダクトづくり",
+export const featuredTopics: { label: string; icon: string }[] = [
+  { label: "AI を前提にした最近の仕事の進め方", icon: "lucide:brain" },
+  { label: "開発に効く Codex やエージェントの使い方", icon: "lucide:zap" },
+  { label: "RAG、LLM 基盤、開発者向けプロダクトづくり", icon: "lucide:wrench" },
 ];
 
 export const projectGroups: { title: string; items: ProjectItem[] }[] = [
@@ -236,6 +236,17 @@ export const projectGroups: { title: string; items: ProjectItem[] }[] = [
       },
     ],
   },
+];
+
+export const skillTags = [
+  "React", "Next.js", "Rails", "Go", "TypeScript", "iOS", "LLM", "RAG",
+];
+
+export const socialLinks = [
+  { label: "GitHub", href: "https://github.com/satococoa", icon: "lucide:github" },
+  { label: "X", href: "https://x.com/satococoa", icon: "lucide:twitter" },
+  { label: "Zenn", href: "https://zenn.dev/satococoa", icon: "lucide:pen-line" },
+  { label: "note", href: "https://note.com/satococoa", icon: "lucide:file-text" },
 ];
 
 export const feedSources = [
