@@ -31,6 +31,13 @@ const endpoint = "/api/writings.json";
     note: "note",
   };
 
+  const createStatusMessage = (message) => {
+    const paragraph = document.createElement("p");
+    paragraph.className = "writing-list-status";
+    paragraph.textContent = message;
+    return paragraph;
+  };
+
   const containers = document.querySelectorAll("[data-writing-list]");
 
   for (const container of containers) {
@@ -48,7 +55,7 @@ const endpoint = "/api/writings.json";
         const items = Array.isArray(data.items) ? data.items : [];
 
         if (items.length === 0) {
-          container.innerHTML = "<p class='writing-list-status'>まだ表示できる記事がありません。</p>";
+          container.replaceChildren(createStatusMessage("まだ表示できる記事がありません。"));
           return;
         }
 
@@ -58,13 +65,28 @@ const endpoint = "/api/writings.json";
         for (const item of items) {
           const row = document.createElement("li");
           row.className = "writing-item";
-          row.innerHTML = `
-            <a class="writing-link" href="${item.url}" target="_blank" rel="noreferrer">
-              <span class="writing-source">${sourceLabel[item.source] ?? item.source}</span>
-              <span class="writing-title">${item.title}</span>
-            </a>
-            <time class="writing-date" datetime="${item.publishedAt}">${formatDate(item.publishedAt)}</time>
-          `;
+
+          const link = document.createElement("a");
+          link.className = "writing-link";
+          link.href = String(item.url ?? "");
+          link.target = "_blank";
+          link.rel = "noreferrer";
+
+          const source = document.createElement("span");
+          source.className = "writing-source";
+          source.textContent = sourceLabel[item.source] ?? String(item.source ?? "");
+
+          const title = document.createElement("span");
+          title.className = "writing-title";
+          title.textContent = String(item.title ?? "");
+
+          const time = document.createElement("time");
+          time.className = "writing-date";
+          time.dateTime = String(item.publishedAt ?? "");
+          time.textContent = formatDate(item.publishedAt);
+
+          link.append(source, title);
+          row.append(link, time);
           list.appendChild(row);
         }
 
