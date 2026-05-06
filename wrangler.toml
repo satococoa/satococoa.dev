@@ -1,1 +1,4 @@
 name = "satococoa-dev"
+routes = [
+  { pattern = "satococoa.dev", custom_domain = true },
+]
