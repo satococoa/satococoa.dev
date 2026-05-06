@@ -5,7 +5,7 @@ import { getLatestWritings } from "@/lib/feeds";
 export const prerender = false;
 
 export const GET: APIRoute = async () => {
-  const items = await getLatestWritings(6);
+  const items = await getLatestWritings();
 
   return new Response(
     JSON.stringify({

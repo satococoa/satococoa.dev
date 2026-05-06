@@ -4,6 +4,7 @@ import Section from "@/components/Section.astro";
 import WritingList from "@/components/WritingList.astro";
 import { externalLinks } from "@/data/links";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { siteOwner } from "@/lib/constants";
 
 const skillTags = ["Ruby", "Ruby on Rails", "Go", "TypeScript", "React", "Next.js", "iOS", "Objective-C", "Swift", "SwiftUI", "Terraform", "AWS", "Google Cloud", "LLM", "RAG"];
 
@@ -31,7 +32,7 @@ const featuredTopics = [
         <img class="hero-avatar" src="/avatar.png" alt="Satoshi Ebisawa" width="72" height="72" />
         <div>
           <h1>Satoshi Ebisawa</h1>
-          <p class="hero-role">Full-stack software developer building products</p>
+          <p class="hero-role">{siteOwner.role}</p>
         </div>
       </div>
       <p class="hero-handle">@satococoa / ROUTE06 / Tokyo, Japan</p>
@@ -99,11 +100,9 @@ const featuredTopics = [
         externalLinks.map((link) => (
           <li>
             <a href={link.href} target="_blank" rel="noreferrer">
-              {link.icon && (
-                <span class="link-icon" aria-hidden="true">
-                  <Icon name={link.icon} />
-                </span>
-              )}
+              <span class="link-icon" aria-hidden="true">
+                <Icon name={link.icon} />
+              </span>
               <span>{link.label}</span>
               {link.note && <small>{link.note}</small>}
             </a>
