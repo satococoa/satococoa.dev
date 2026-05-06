@@ -8,18 +8,18 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 const skillTags = ["Ruby", "Ruby on Rails", "Go", "TypeScript", "React", "Next.js", "iOS", "Objective-C", "Swift", "SwiftUI", "Terraform", "AWS", "Google Cloud", "LLM", "RAG"];
 
 const capabilities = [
-  { label: "Web frontend (React, Next.js)", icon: "lucide:monitor" },
-  { label: "Backend (Ruby on Rails, Go, TypeScript)", icon: "lucide:server" },
-  { label: "Infrastructure (Terraform, AWS, Google Cloud)", icon: "lucide:cloud" },
-  { label: "iOS app development", icon: "lucide:smartphone" },
-  { label: "Product development and technical leadership", icon: "lucide:rocket" },
-  { label: "LLM application / RAG / AI developer tooling", icon: "lucide:bot" },
+  { label: "Web フロントエンド (React, Next.js)", icon: "lucide:monitor" },
+  { label: "バックエンド (Ruby on Rails, Go, TypeScript)", icon: "lucide:server" },
+  { label: "インフラ (Terraform, AWS, Google Cloud)", icon: "lucide:cloud" },
+  { label: "iOS アプリ開発", icon: "lucide:smartphone" },
+  { label: "事業とチームを前に進める技術判断", icon: "lucide:rocket" },
+  { label: "LLM アプリケーション / RAG / AI developer tooling", icon: "lucide:bot" },
 ];
 
 const featuredTopics = [
   { label: "AI を前提にした最近の仕事の進め方", icon: "lucide:brain" },
   { label: "開発に効く Codex やエージェントの使い方", icon: "lucide:zap" },
-  { label: "RAG、LLM 基盤、開発者向けプロダクトづくり", icon: "lucide:wrench" },
+  { label: "RAG、LLM 基盤、開発者向けの仕組みづくり", icon: "lucide:wrench" },
 ];
 ---
 
@@ -39,7 +39,7 @@ const featuredTopics = [
         Web プロダクトの開発を中心に、アプリケーション、インフラ、運用、チームづくりをまたいで、ものごとが前に進む状態をつくってきました。
       </p>
       <p class="hero-copy muted">
-        最近は AI を前提にしたプロダクト開発や、開発者の仕事の進め方に関心を持っています。
+        最近は AI を前提にした開発体験や、開発者の仕事の進め方に関心を持っています。
       </p>
       <div class="hero-tags">
         {skillTags.map((tag) => <span class="hero-tag">{tag}</span>)}
