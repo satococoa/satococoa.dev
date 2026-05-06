@@ -3,19 +3,19 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Section from "@/components/Section.astro";
 
 const workSummary = [
-  "フルスタックに広く手を動かせること",
-  "プロダクトとチームを前に進めるための技術判断ができること",
-  "AI 時代の開発フローや働き方を自分で試し、言語化できること",
+  "アプリケーションからインフラまで、必要な範囲を横断して実装・改善すること",
+  "プロダクトとチームの状況を見ながら、現実的な技術判断をすること",
+  "AI を前提にした開発フローやプロダクト基盤を試し、言語化すること",
 ];
 ---
 
 <BaseLayout
-  title="Work"
-  description="Satoshi Ebisawa の業務経歴、得意領域、技術スタンスをまとめたページです。"
+  title="仕事と考え方"
+  description="Satoshi Ebisawa の業務経歴、得意領域、仕事で大事にしていることをまとめたページです。"
 >
   <section class="page-header">
-    <p class="page-header-eyebrow">Work</p>
-    <h1 class="page-header-title">仕事</h1>
+    <p class="page-header-eyebrow">Work & Approach</p>
+    <h1 class="page-header-title">仕事と考え方</h1>
     <p class="page-header-lead">
       Web プロダクトの開発と改善を軸に、実装、設計、運用、マネジメントをまたいで必要なことを広く扱ってきました。
     </p>
@@ -28,17 +28,11 @@ const workSummary = [
   >
     <ul class="plain-list">
       <li>
-        独学でプログラミングを始め、PG / SE、toC Web サービス、iOS
-        アプリ、エンジニアリングマネジメント、AI プロダクト開発へと担当領域を広げてきました。
+        独学でプログラミングを始めてから、Rails、iOS、Web
+        フロントエンド、インフラ、エンジニアリングマネジメントへと担当領域を広げてきました。
       </li>
       <li>
-        サーバサイド、フロントエンド、インフラをまたいで、実装だけでなく技術選定、運用改善、開発フロー整備まで扱うことが多いです。
-      </li>
-      <li>
-        0→1 の立ち上げ、成長フェーズのプロダクト改善、チームで仕事を前に進めるための仕組みづくりに継続して取り組んできました。
-      </li>
-      <li>
-        最近は AI-native なプロダクト開発、RAG や LLM 基盤、開発者の生産性を高めるワークフローに特に関心があります。
+        立ち上げ期の実装、成長フェーズの改善、チームで仕事を前に進めるための仕組みづくりを行き来しながら、プロダクトに必要なことを現実的に扱うことを大事にしています。
       </li>
     </ul>
   </Section>
@@ -54,85 +48,34 @@ const workSummary = [
   </Section>
 
   <Section
-    title="関わってきた領域"
-    eyebrow="Experience"
-    lead="職種名に閉じず、プロダクトとチームが前に進むために必要な地点まで責任を持つ進め方を好みます。"
-  >
-    <div class="stack-list">
-      <article class="stack-card">
-        <p class="meta">Career</p>
-        <h3>Rails、iOS、Web プロダクト開発</h3>
-        <p>
-          独学からキャリアを始め、PG / SE を経て、イグニスグループでは with や INSPIX LIVE
-          などの toC プロダクト開発に深く関わりました。
-        </p>
-      </article>
-      <article class="stack-card">
-        <p class="meta">2021 -</p>
-        <h3>ROUTE06 でのプロダクト開発とマネジメント</h3>
-        <p>
-          2021 年に ROUTE06 へ参加。6 ヶ月の育休を経て復職し、CHOOSEBASE SHIBUYA
-          の開発やエンジニアリングマネジメントに関わってきました。
-        </p>
-      </article>
-      <article class="stack-card">
-        <p class="meta">Now</p>
-        <h3>AI プロダクトと開発フロー</h3>
-        <p>
-          Acsim の開発に関わりながら、これまで取り組んできた Giselle も含めて、AI
-          を前提にしたプロダクト開発、RAG、LLM infrastructure、agentic coding を実践してきました。
-        </p>
-      </article>
-    </div>
-  </Section>
-
-  <Section
-    title="主なキャリアの流れ"
+    title="キャリアの流れ"
     eyebrow="History"
     lead="取り組んできたことを今につながる流れでまとめています。"
   >
     <div class="stack-list">
       <article class="stack-card">
-        <p class="meta">2025 -</p>
-        <h3>Giselle / Acsim</h3>
-        <p>
-          AI を前提にしたプロダクト開発、RAG、LLM infrastructure、開発フロー改善に、実装と発信の両面から関わってきました。
-        </p>
-        <ul class="plain-list compact-list">
-          <li>
-            Giselle では AI App Builder の開発に関わり、GitHub RAG や GitHub Vector Store
-            などのテーマでも発信してきました。
-          </li>
-          <li>
-            Acsim では AI 基盤やアプリケーション開発に関わりながら、LLM
-            キュー、Bedrock、並行処理設計などの実践も言語化しています。
-          </li>
-        </ul>
-      </article>
-      <article class="stack-card">
         <p class="meta">2021 -</p>
         <h3>ROUTE06</h3>
         <p>
-          2021 年に参加し、6 ヶ月の育休を経て復職。CHOOSEBASE SHIBUYA
-          の開発やエンジニアリングマネジメントに関わってきました。
+          コマース領域の Web / iOS 開発、エンジニアリングマネジメント、Giselle / Acsim
+          などの AI プロダクト開発に関わってきました。
         </p>
         <ul class="plain-list compact-list">
-          <li>Web プロダクトの開発と改善に加え、チームづくりや技術的な意思決定も担当。</li>
-          <li>育休取得と復職を経験しながら、持続可能に働けるチームのあり方にも関心を持っています。</li>
+          <li>EC サービス (Web, iOS) の開発と改善</li>
+          <li>チームづくりや技術的な意思決定を含むエンジニアリングマネジメント</li>
+          <li>AI App Builder、RAG、Bedrock、AI 基盤設計などを含む AI プロダクト開発</li>
         </ul>
       </article>
       <article class="stack-card">
         <p class="meta">2011 - 2021</p>
         <h3>イグニスグループ</h3>
         <p>
-          with や INSPIX LIVE などの toC プロダクトに深く関わり、Rails、iOS、Web サービス開発の経験を積みました。
+          マッチングサービスや VR ライブ配信プラットフォームなど、toC
+          プロダクトの開発と運用を経験しました。
         </p>
         <ul class="plain-list compact-list">
-          <li>toC サービスの開発運営を通じて、プロダクト開発の基礎体力を身につけました。</li>
-          <li>
-            現在の INSPIX WORLD につながる前身プロダクト INSPIX LIVE
-            の立ち上げと運営にも深く関わりました。
-          </li>
+          <li>Rails、iOS、Web サービス開発</li>
+          <li>立ち上げ期から運用フェーズまでのプロダクト開発</li>
         </ul>
       </article>
       <article class="stack-card">
@@ -157,6 +100,19 @@ const workSummary = [
       そのため、言語やフレームワークを固定のアイデンティティにはせず、状況に応じて現実的に選びます。
       一方で、人が気持ちよく働けるチームづくりや、コミュニティ活動、育休取得を含むキャリアの積み重ねも自分の仕事の一部だと考えています。
     </p>
+  </Section>
+
+  <Section
+    title="大事にしていること"
+    eyebrow="Principles"
+    lead="普段の仕事で意識していることです。"
+  >
+    <ul class="plain-list">
+      <li>判断の背景や経緯を文章に残し、非同期でも仕事が進む状態をつくること。</li>
+      <li>レビューや相談を早めに出して、チーム全体の流れを止めないこと。</li>
+      <li>AI を試作、調査、整理、実装の速度を上げる実用的な道具として扱うこと。</li>
+      <li>短期的な頑張りに寄せすぎず、健康に長く続けられるやり方で成果を出すこと。</li>
+    </ul>
   </Section>
 
   <Section

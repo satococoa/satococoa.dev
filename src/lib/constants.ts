@@ -12,9 +12,7 @@ export const siteOwner = {
 
 export const navigation = [
   { label: "トップ", href: "/" },
-  { label: "仕事", href: "/work" },
-  { label: "仕事の進め方", href: "/how-i-work" },
-  { label: "プロダクト", href: "/products" },
+  { label: "仕事と考え方", href: "/work" },
   { label: "アーカイブ", href: "/archive" },
 ];
 

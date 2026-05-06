@@ -5,14 +5,15 @@ import WritingList from "@/components/WritingList.astro";
 import { externalLinks } from "@/data/links";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const skillTags = ["React", "Next.js", "Rails", "Go", "TypeScript", "iOS", "LLM", "RAG"];
+const skillTags = ["Ruby", "Ruby on Rails", "Go", "TypeScript", "React", "Next.js", "iOS", "Objective-C", "Swift", "SwiftUI", "Terraform", "AWS", "Google Cloud", "LLM", "RAG"];
 
 const capabilities = [
   { label: "Web frontend (React, Next.js)", icon: "lucide:monitor" },
   { label: "Backend (Ruby on Rails, Go, TypeScript)", icon: "lucide:server" },
+  { label: "Infrastructure (Terraform, AWS, Google Cloud)", icon: "lucide:cloud" },
   { label: "iOS app development", icon: "lucide:smartphone" },
   { label: "Product development and technical leadership", icon: "lucide:rocket" },
-  { label: "LLM application / RAG / AI workflow design", icon: "lucide:bot" },
+  { label: "LLM application / RAG / AI developer tooling", icon: "lucide:bot" },
 ];
 
 const featuredTopics = [
@@ -35,11 +36,10 @@ const featuredTopics = [
       </div>
       <p class="hero-handle">@satococoa / ROUTE06 / Tokyo, Japan</p>
       <p class="hero-copy">
-        Web プロダクトの開発、改善、運営を横断してきたソフトウェア開発者です。Rails、iOS、Next.js
-        などを使いながら、プロダクトづくりの現場で必要なことを広く扱ってきました。
+        Web プロダクトの開発を中心に、アプリケーション、インフラ、運用、チームづくりをまたいで、ものごとが前に進む状態をつくってきました。
       </p>
       <p class="hero-copy muted">
-        最近は AI を前提にしたプロダクト開発や開発フローにも強い関心があります。
+        最近は AI を前提にしたプロダクト開発や、開発者の仕事の進め方に関心を持っています。
       </p>
       <div class="hero-tags">
         {skillTags.map((tag) => <span class="hero-tag">{tag}</span>)}
