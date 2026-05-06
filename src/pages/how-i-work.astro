@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Section from "@/components/Section.astro";
-import { workingPrinciples } from "@/data/work";
 ---
 
 <BaseLayout
@@ -22,16 +21,29 @@ import { workingPrinciples } from "@/data/work";
     lead="仕事を進めるうえで、日々重視していることです。"
   >
     <div class="stack-list">
-      {
-        workingPrinciples.map((section) => (
-          <article class="stack-card">
-            <h3>{section.title}</h3>
-            <ul class="plain-list">
-              {section.items.map((item) => <li>{item}</li>)}
-            </ul>
-          </article>
-        ))
-      }
+      <article class="stack-card">
+        <h3>チームで前に進める</h3>
+        <ul class="plain-list">
+          <li>非同期でも仕事が進むように、判断の背景や経緯をできるだけ文章に残します。</li>
+          <li>レビューや相談を後回しにせず、チーム全体の流れが止まらない状態を重視します。</li>
+          <li>人ではなく課題に向かうこと、配慮はしつつ遠慮しすぎないことを大事にしています。</li>
+        </ul>
+      </article>
+      <article class="stack-card">
+        <h3>AI を現実的に使う</h3>
+        <ul class="plain-list">
+          <li>AI は魔法ではなく、試作、調査、整理、実装の速度を上げるための実用的な道具として使います。</li>
+          <li>雑務や叩き台づくりは積極的に AI に任せつつ、最終判断や設計の責任は人間が持つ前提で運用します。</li>
+          <li>自分だけが速くなるのではなく、チーム全体で再利用できる進め方に落とすことを意識しています。</li>
+        </ul>
+      </article>
+      <article class="stack-card">
+        <h3>持続可能に働く</h3>
+        <ul class="plain-list">
+          <li>短期的な頑張りよりも、健康に長く続けられるやり方で成果を出すことを優先します。</li>
+          <li>育休取得や生活の変化も含めて、仕事と生活の両立を前提にしたキャリアを大事にしています。</li>
+        </ul>
+      </article>
     </div>
   </Section>
 </BaseLayout>

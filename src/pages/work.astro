@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Section from "@/components/Section.astro";
-import { communityActivities, workHighlights, workHistory, workTimeline } from "@/data/work";
 
 const workSummary = [
   "フルスタックに広く手を動かせること",
@@ -28,7 +27,19 @@ const workSummary = [
     lead="独学からキャリアを始め、toC サービス、コマース、AI プロダクトまで関わる領域を広げてきました。"
   >
     <ul class="plain-list">
-      {workHighlights.map((item) => <li>{item}</li>)}
+      <li>
+        独学でプログラミングを始め、PG / SE、toC Web サービス、iOS
+        アプリ、エンジニアリングマネジメント、AI プロダクト開発へと担当領域を広げてきました。
+      </li>
+      <li>
+        サーバサイド、フロントエンド、インフラをまたいで、実装だけでなく技術選定、運用改善、開発フロー整備まで扱うことが多いです。
+      </li>
+      <li>
+        0→1 の立ち上げ、成長フェーズのプロダクト改善、チームで仕事を前に進めるための仕組みづくりに継続して取り組んできました。
+      </li>
+      <li>
+        最近は AI-native なプロダクト開発、RAG や LLM 基盤、開発者の生産性を高めるワークフローに特に関心があります。
+      </li>
     </ul>
   </Section>
 
@@ -48,15 +59,30 @@ const workSummary = [
     lead="職種名に閉じず、プロダクトとチームが前に進むために必要な地点まで責任を持つ進め方を好みます。"
   >
     <div class="stack-list">
-      {
-        workTimeline.map((item) => (
-          <article class="stack-card">
-            <p class="meta">{item.period}</p>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </article>
-        ))
-      }
+      <article class="stack-card">
+        <p class="meta">Career</p>
+        <h3>Rails、iOS、Web プロダクト開発</h3>
+        <p>
+          独学からキャリアを始め、PG / SE を経て、イグニスグループでは with や INSPIX LIVE
+          などの toC プロダクト開発に深く関わりました。
+        </p>
+      </article>
+      <article class="stack-card">
+        <p class="meta">2021 -</p>
+        <h3>ROUTE06 でのプロダクト開発とマネジメント</h3>
+        <p>
+          2021 年に ROUTE06 へ参加。6 ヶ月の育休を経て復職し、CHOOSEBASE SHIBUYA
+          の開発やエンジニアリングマネジメントに関わってきました。
+        </p>
+      </article>
+      <article class="stack-card">
+        <p class="meta">Now</p>
+        <h3>AI プロダクトと開発フロー</h3>
+        <p>
+          Acsim の開発に関わりながら、これまで取り組んできた Giselle も含めて、AI
+          を前提にしたプロダクト開発、RAG、LLM infrastructure、agentic coding を実践してきました。
+        </p>
+      </article>
     </div>
   </Section>
 
@@ -66,18 +92,59 @@ const workSummary = [
     lead="取り組んできたことを今につながる流れでまとめています。"
   >
     <div class="stack-list">
-      {
-        workHistory.map((item) => (
-          <article class="stack-card">
-            <p class="meta">{item.period}</p>
-            <h3>{item.title}</h3>
-            <p>{item.summary}</p>
-            <ul class="plain-list compact-list">
-              {item.details.map((detail) => <li>{detail}</li>)}
-            </ul>
-          </article>
-        ))
-      }
+      <article class="stack-card">
+        <p class="meta">2025 -</p>
+        <h3>Giselle / Acsim</h3>
+        <p>
+          AI を前提にしたプロダクト開発、RAG、LLM infrastructure、開発フロー改善に、実装と発信の両面から関わってきました。
+        </p>
+        <ul class="plain-list compact-list">
+          <li>
+            Giselle では AI App Builder の開発に関わり、GitHub RAG や GitHub Vector Store
+            などのテーマでも発信してきました。
+          </li>
+          <li>
+            Acsim では AI 基盤やアプリケーション開発に関わりながら、LLM
+            キュー、Bedrock、並行処理設計などの実践も言語化しています。
+          </li>
+        </ul>
+      </article>
+      <article class="stack-card">
+        <p class="meta">2021 -</p>
+        <h3>ROUTE06</h3>
+        <p>
+          2021 年に参加し、6 ヶ月の育休を経て復職。CHOOSEBASE SHIBUYA
+          の開発やエンジニアリングマネジメントに関わってきました。
+        </p>
+        <ul class="plain-list compact-list">
+          <li>Web プロダクトの開発と改善に加え、チームづくりや技術的な意思決定も担当。</li>
+          <li>育休取得と復職を経験しながら、持続可能に働けるチームのあり方にも関心を持っています。</li>
+        </ul>
+      </article>
+      <article class="stack-card">
+        <p class="meta">2011 - 2021</p>
+        <h3>イグニスグループ</h3>
+        <p>
+          with や INSPIX LIVE などの toC プロダクトに深く関わり、Rails、iOS、Web サービス開発の経験を積みました。
+        </p>
+        <ul class="plain-list compact-list">
+          <li>toC サービスの開発運営を通じて、プロダクト開発の基礎体力を身につけました。</li>
+          <li>
+            現在の INSPIX WORLD につながる前身プロダクト INSPIX LIVE
+            の立ち上げと運営にも深く関わりました。
+          </li>
+        </ul>
+      </article>
+      <article class="stack-card">
+        <p class="meta">Before 2011</p>
+        <h3>独学からキャリアのスタートへ</h3>
+        <p>
+          別職種から独学でプログラミングを学び、PC スクール講師や PG / SE を経てソフトウェア開発の仕事へ入りました。
+        </p>
+        <ul class="plain-list compact-list">
+          <li>キャリアの出発点から実務に必要なことを自分で学び続けてきたことが、今の幅広い対応力につながっています。</li>
+        </ul>
+      </article>
     </div>
   </Section>
 
@@ -98,22 +165,23 @@ const workSummary = [
     lead="プロダクト開発と並行して、コミュニティの運営や場づくりにも継続して関わってきました。"
   >
     <div class="stack-list">
-      {
-        communityActivities.map((activity) => (
-          <article class="stack-card">
-            <h3>
-              {activity.href ? (
-                <a href={activity.href} target="_blank" rel="noreferrer">
-                  {activity.title}
-                </a>
-              ) : (
-                activity.title
-              )}
-            </h3>
-            <p>{activity.description}</p>
-          </article>
-        ))
-      }
+      <article class="stack-card">
+        <h3>
+          <a href="https://p4d.connpass.com/" target="_blank" rel="noreferrer">P4D</a>
+        </h3>
+        <p>
+          プロダクトや開発の実践を持ち寄るコミュニティとして主催。技術そのものだけでなく、ものづくりの進め方や現場の工夫を共有する場づくりに取り組みました。
+        </p>
+      </article>
+      <article class="stack-card">
+        <h3>
+          <a href="https://rubymotionjp.connpass.com/" target="_blank" rel="noreferrer">RubyMotionJP</a>
+        </h3>
+        <p>
+          RubyMotion をテーマにしたコミュニティの主催として、情報交換や勉強会の運営に関わりました。iOS
+          開発に向き合っていた時期の活動の一つです。
+        </p>
+      </article>
     </div>
   </Section>
 </BaseLayout>

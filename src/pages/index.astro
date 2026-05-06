@@ -3,8 +3,23 @@ import { Icon } from "astro-icon/components";
 import Section from "@/components/Section.astro";
 import WritingList from "@/components/WritingList.astro";
 import { externalLinks } from "@/data/links";
-import { profile } from "@/data/profile";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const skillTags = ["React", "Next.js", "Rails", "Go", "TypeScript", "iOS", "LLM", "RAG"];
+
+const capabilities = [
+  { label: "Web frontend (React, Next.js)", icon: "lucide:monitor" },
+  { label: "Backend (Ruby on Rails, Go, TypeScript)", icon: "lucide:server" },
+  { label: "iOS app development", icon: "lucide:smartphone" },
+  { label: "Product development and technical leadership", icon: "lucide:rocket" },
+  { label: "LLM application / RAG / AI workflow design", icon: "lucide:bot" },
+];
+
+const featuredTopics = [
+  { label: "AI を前提にした最近の仕事の進め方", icon: "lucide:brain" },
+  { label: "開発に効く Codex やエージェントの使い方", icon: "lucide:zap" },
+  { label: "RAG、LLM 基盤、開発者向けプロダクトづくり", icon: "lucide:wrench" },
+];
 ---
 
 <BaseLayout>
@@ -12,17 +27,22 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <div class="hero-content">
       <p class="hero-eyebrow">Personal portal</p>
       <div class="hero-identity">
-        <img class="hero-avatar" src="/avatar.png" alt={profile.name} width="72" height="72" />
+        <img class="hero-avatar" src="/avatar.png" alt="Satoshi Ebisawa" width="72" height="72" />
         <div>
-          <h1>{profile.name}</h1>
-          <p class="hero-role">{profile.role}</p>
+          <h1>Satoshi Ebisawa</h1>
+          <p class="hero-role">Full-stack software developer building products</p>
         </div>
       </div>
-      <p class="hero-handle">{profile.handle} / {profile.company} / {profile.location}</p>
-      <p class="hero-copy">{profile.intro}</p>
-      <p class="hero-copy muted">{profile.summary}</p>
+      <p class="hero-handle">@satococoa / ROUTE06 / Tokyo, Japan</p>
+      <p class="hero-copy">
+        Web プロダクトの開発、改善、運営を横断してきたソフトウェア開発者です。Rails、iOS、Next.js
+        などを使いながら、プロダクトづくりの現場で必要なことを広く扱ってきました。
+      </p>
+      <p class="hero-copy muted">
+        最近は AI を前提にしたプロダクト開発や開発フローにも強い関心があります。
+      </p>
       <div class="hero-tags">
-        {profile.skillTags.map((tag) => <span class="hero-tag">{tag}</span>)}
+        {skillTags.map((tag) => <span class="hero-tag">{tag}</span>)}
       </div>
     </div>
   </section>
@@ -33,7 +53,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     lead="主に扱ってきた領域です。"
   >
     <ul class="icon-list">
-      {profile.capabilities.map((item) => (
+      {capabilities.map((item) => (
         <li>
           <span class="icon-list-icon" aria-hidden="true">
             <Icon name={item.icon} />
@@ -50,7 +70,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     lead="最近よく取り組んでいるテーマです。"
   >
     <ul class="icon-list">
-      {profile.featuredTopics.map((topic) => (
+      {featuredTopics.map((topic) => (
         <li>
           <span class="icon-list-icon" aria-hidden="true">
             <Icon name={topic.icon} />

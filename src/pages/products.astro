@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Section from "@/components/Section.astro";
-import { projectGroups } from "@/data/products";
 ---
 
 <BaseLayout
@@ -21,30 +20,97 @@ import { projectGroups } from "@/data/products";
     eyebrow="Products"
     lead="関わってきたプロダクトと、個人で作っているツールです。"
   >
-    {
-      projectGroups.map((group) => (
-        <div class="group-block">
-          <p class="meta">{group.title}</p>
-          <div class="stack-list">
-            {group.items.map((item) => (
-              <article class="stack-card">
-                <p class="meta">{item.category}</p>
-                <h3>
-                  {item.href ? (
-                    <a href={item.href} target="_blank" rel="noreferrer">
-                      {item.title}
-                    </a>
-                  ) : (
-                    item.title
-                  )}
-                </h3>
-                <p>{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      ))
-    }
+    <div class="group-block">
+      <p class="meta">Work products</p>
+      <div class="stack-list">
+        <article class="stack-card">
+          <p class="meta">AI workflow / product</p>
+          <h3>
+            <a href="https://giselles.ai/author/satoshi-ebisawa" target="_blank" rel="noreferrer">
+              Giselle
+            </a>
+          </h3>
+          <p>
+            これまで開発に関わってきた AI App Builder。GitHub RAG や GitHub Vector Store
+            などのテーマでも発信してきました。
+          </p>
+        </article>
+        <article class="stack-card">
+          <p class="meta">LLM infrastructure / AI product</p>
+          <h3>
+            <a href="https://ai.acsim.app/authors/satoshi-ebisawa" target="_blank" rel="noreferrer">
+              Acsim
+            </a>
+          </h3>
+          <p>
+            いま開発に関わっている AI プロダクト。LLM キューや Bedrock
+            を前提にした並行処理設計など、実装に近いテーマも発信しています。
+          </p>
+        </article>
+        <article class="stack-card">
+          <p class="meta">Commerce platform</p>
+          <h3>
+            <a href="https://choosebase.jp/" target="_blank" rel="noreferrer">
+              CHOOSEBASE SHIBUYA
+            </a>
+          </h3>
+          <p>
+            ROUTE06 で関わってきたプロジェクトの一つ。プロダクト開発とチームづくりの両面で経験を積んできました。
+          </p>
+        </article>
+        <article class="stack-card">
+          <p class="meta">toC product</p>
+          <h3>
+            <a href="https://with.is/" target="_blank" rel="noreferrer">
+              with
+            </a>
+          </h3>
+          <p>
+            イグニスグループ時代に関わった主要プロジェクトの一つ。toC サービス開発の経験を積んだ代表的なプロダクトです。
+          </p>
+        </article>
+        <article class="stack-card">
+          <p class="meta">Live / XR product</p>
+          <h3>
+            <a href="https://www.inspix-world.com/" target="_blank" rel="noreferrer">
+              INSPIX LIVE
+            </a>
+          </h3>
+          <p>
+            現在の INSPIX WORLD につながる前身プロダクト。開発と運営に深く関わり、0→1
+            の立ち上げを経験しました。
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="group-block">
+      <p class="meta">OSS / personal tools</p>
+      <div class="stack-list">
+        <article class="stack-card">
+          <p class="meta">CLI / developer tooling</p>
+          <h3>
+            <a href="https://github.com/satococoa/wtp" target="_blank" rel="noreferrer">
+              wtp
+            </a>
+          </h3>
+          <p>
+            git worktree を便利に使うための CLI ツール。開発フローを軽くするための実験として作っています。
+          </p>
+        </article>
+        <article class="stack-card">
+          <p class="meta">Git / workflow tooling</p>
+          <h3>
+            <a href="https://github.com/satococoa/git-worktreeinclude" target="_blank" rel="noreferrer">
+              git-worktreeinclude
+            </a>
+          </h3>
+          <p>
+            git worktree の運用を助ける OSS。実務の中で必要になった小さな道具を形にしています。
+          </p>
+        </article>
+      </div>
+    </div>
   </Section>
 
 </BaseLayout>

@@ -5,6 +5,11 @@ export const siteMeta = {
   googleAnalyticsId: "G-063LZ5YTLV",
 };
 
+export const siteOwner = {
+  name: "Satoshi Ebisawa",
+  role: "Full-stack software developer building products",
+};
+
 export const navigation = [
   { label: "トップ", href: "/" },
   { label: "仕事", href: "/work" },

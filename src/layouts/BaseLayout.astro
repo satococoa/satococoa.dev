@@ -1,8 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import "@/styles/global.css";
-import { profile } from "@/data/profile";
-import { navigation, socialLinks, siteMeta } from "@/lib/constants";
+import { navigation, siteMeta, siteOwner, socialLinks } from "@/lib/constants";
 
 type Props = {
   title?: string;
@@ -74,8 +73,8 @@ const currentPath = Astro.url.pathname;
 
       <footer class="site-footer">
         <div class="footer-main">
-          <p class="footer-name">{profile.name}</p>
-          <p class="footer-bio">{profile.role}</p>
+          <p class="footer-name">{siteOwner.name}</p>
+          <p class="footer-bio">{siteOwner.role}</p>
           <ul class="footer-social">
             {socialLinks.map((link) => (
               <li>
