@@ -1,0 +1,36 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    versioning-strategy: increase
+    open-pull-requests-limit: 5
+    groups:
+      astro-cloudflare:
+        patterns:
+          - "astro"
+          - "astro-icon"
+          - "@astrojs/*"
+          - "wrangler"
+        update-types:
+          - "minor"
+          - "patch"
+      dependencies-minor-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    open-pull-requests-limit: 2

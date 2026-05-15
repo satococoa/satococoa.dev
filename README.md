@@ -1,16 +1,22 @@
 # satococoa.dev
 
-Personal portal built with `Astro` and deployed to `Cloudflare Pages`.
+Personal portal built with `Astro` and deployed to `Cloudflare Workers`.
 
 ## Development
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ## Build
 
 ```bash
-npm run build
+pnpm build
+```
+
+## Deploy
+
+```bash
+pnpm deploy
 ```
