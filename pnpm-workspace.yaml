@@ -2,10 +2,6 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
-minimumReleaseAge: 1440
-minimumReleaseAgeExclude:
-  - devalue
-minimumReleaseAgeStrict: true
 overrides:
   devalue: 5.8.1
   yaml: 2.9.0
