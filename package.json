@@ -12,12 +12,12 @@
     "upload": "pnpm build && wrangler versions upload --config dist/server/wrangler.json"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.3.1",
+    "@astrojs/cloudflare": "^13.5.4",
     "@iconify-json/lucide": "^1.2.102",
-    "astro": "^6.3.3",
+    "astro": "^6.3.7",
     "astro-icon": "^1.1.5",
     "fast-xml-parser": "^5.5.9",
-    "wrangler": "^4.92.0"
+    "wrangler": "^4.94.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
