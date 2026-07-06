@@ -18,8 +18,8 @@ importers:
         specifier: ^14.1.1
         version: 14.1.1(@types/node@25.7.0)(astro@7.0.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@25.7.0)(yaml@2.9.0))(esbuild@0.28.1)(workerd@1.20260701.1)(wrangler@4.107.0)(yaml@2.9.0)
       '@iconify-json/lucide':
-        specifier: ^1.2.115
-        version: 1.2.115
+        specifier: ^1.2.116
+        version: 1.2.116
       astro:
         specifier: ^7.0.6
         version: 7.0.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@25.7.0)(yaml@2.9.0)
@@ -481,8 +481,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@iconify-json/lucide@1.2.115':
-    resolution: {integrity: sha512-plc4npdX0I2RpsE5FFIdkCjGtL9vG09FU/a2nZ+pJ0fFQV6mTqRlbUgZgUgSPDFswq0kaaNT229nW6AQRj5o9w==}
+  '@iconify-json/lucide@1.2.116':
+    resolution: {integrity: sha512-mbwPmiUXaZyLMSeQOxiTqz2fmZikD9qiGnMBiev47UUNY9uGCEgMg9iUYwaJzCtJTDtAIyK4vokfIpqsVorgSw==}
 
   '@iconify/tools@4.2.0':
     resolution: {integrity: sha512-WRxPva/ipxYkqZd1+CkEAQmd86dQmrwH0vwK89gmp2Kh2WyyVw57XbPng0NehP3x4V1LzLsXUneP1uMfTMZmUA==}
@@ -2639,7 +2639,7 @@ snapshots:
   '@esbuild/win32-x64@0.28.1':
     optional: true
 
-  '@iconify-json/lucide@1.2.115':
+  '@iconify-json/lucide@1.2.116':
     dependencies:
       '@iconify/types': 2.0.0
 
