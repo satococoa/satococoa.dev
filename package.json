@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.2.5",
-    "@iconify-json/lucide": "^1.2.124",
+    "@iconify-json/lucide": "^1.2.126",
     "astro": "^7.2.9",
     "astro-icon": "^1.2.0",
-    "fast-xml-parser": "^5.11.0",
+    "fast-xml-parser": "^5.11.1",
     "wrangler": "^4.127.0"
   },
   "devDependencies": {
